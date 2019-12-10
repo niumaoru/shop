@@ -9,9 +9,9 @@ class TestsController extends Controller
 {
     public function test()
     {
-        //dd(route_class());
-        //dd(Route::currentRouteName());
-        return '恭喜测试成功';
+        $faker = app(Faker\Generator::class);
+        $a = sprintf('第%d街道第%d号', $faker->randomNumber(2), $faker->randomNumber(3));
+        return $a;
     }
 
 
