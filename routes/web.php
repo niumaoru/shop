@@ -16,3 +16,5 @@ Route::get('/test', 'TestsController@test')->name('test');
 
 //主页路由
 Route::get('/', 'PagesController@root')->name('root');
+Auth::routes();
+
