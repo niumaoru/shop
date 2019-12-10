@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//测试路由
+Route::get('/test', 'TestsController@test')->name('test');
+
+//主页路由
+Route::get('/', 'PagesController@root')->name('root');
