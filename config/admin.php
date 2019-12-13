@@ -151,11 +151,9 @@ return [
     |
     */
     'upload' => [
+        // 对应 filesystem.php 中的 disks
+        'disk' => 'public',
 
-        // Disk in `config/filesystem.php`.
-        'disk' => 'admin',
-
-        // Image and file upload path under the disk above.
         'directory' => [
             'image' => 'images',
             'file'  => 'files',
@@ -395,6 +393,44 @@ return [
     |
     */
     'extensions' => [
-
+        // 新增编辑器配置开始
+        'quill' => [
+            // If the value is set to false, this extension will be disabled
+            'enable' => true,
+            'config' => [
+                'modules' => [
+                    'syntax' => true,
+                    'toolbar' =>
+                        [
+                            ['size' => []],
+                            ['header' => []],
+                            'bold',
+                            'italic',
+                            'underline',
+                            'strike',
+                            ['script' => 'super'],
+                            ['script' => 'sub'],
+                            ['color' => []],
+                            ['background' => []],
+                            'blockquote',
+                            'code-block',
+                            ['list' => 'ordered'],
+                            ['list' => 'bullet'],
+                            ['indent' => '-1'],
+                            ['indent' => '+1'],
+                            'direction',
+                            ['align' => []],
+                            'link',
+                            'image',
+                            'video',
+                            'formula',
+                            'clean'
+                        ],
+                ],
+                'theme' => 'snow',
+                'height' => '200px',
+            ]
+        ]
+        // 新增编辑器配置结束
     ],
 ];
