@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Faker\Generator as Faker;
 
 
 class TestsController extends Controller
 {
     public function test()
     {
-        $faker = app(Faker\Generator::class);
-        $a = sprintf('第%d街道第%d号', $faker->randomNumber(2), $faker->randomNumber(3));
-        return $a;
+        $faker = new Faker();
+        echo $faker->randomNumber(4);
     }
 
 

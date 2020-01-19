@@ -12,7 +12,7 @@
 */
 
 //测试路由
-Route::get('/test', 'TestsController@startsWith')->name('test');
+Route::get('/test', 'TestsController@test')->name('test');
 
 //主页路由(后期被商品列表页面取代)
 //Route::get('/', 'PagesController@root')->name('root')->middleware('verified');
